@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Shuffle" />
+                        <MenuItem mnemonicParsing="false" text="Clear   Ctrl-X" />
+                        <MenuItem mnemonicParsing="false" text="Edit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Exit">
+                    <items>
+                        <Menu mnemonicParsing="false" text="Picture Effect">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Sepia Tone" />
+                                <MenuItem mnemonicParsing="false" text="Glow" />
+                                <MenuItem mnemonicParsing="false" text="Shadow" />
+                            </items>
+                        </Menu>
+                        <MenuItem mnemonicParsing="false" text="No Effects" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="View">
+                    <items>
+                        <CheckMenuItem mnemonicParsing="false" text="Title" />
+                        <CheckMenuItem mnemonicParsing="false" text="Binomial name" />
+                        <CheckMenuItem mnemonicParsing="false" text="Picture" />
+                        <CheckMenuItem mnemonicParsing="false" text="Description" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <left>
+        <TabPane prefHeight="375.0" prefWidth="498.0" side="LEFT" BorderPane.alignment="CENTER">
+            <tabs>
+                <Tab disable="true" text="New">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                </Tab>
+                <Tab text="Rectangle">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane hbarPolicy="ALWAYS" layoutX="127.0" layoutY="83.0" prefHeight="210.0" prefWidth="215.0" vbarPolicy="ALWAYS">
+                           <content>
+                              <StackPane prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: black; -fx-border-color: yellow; -fx-border-width: 7;" />
+                           </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </left>
+</BorderPane>
