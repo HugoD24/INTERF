@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.CheckMenuItem?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.StackPane?>
@@ -19,10 +20,10 @@
                     <items>
                         <MenuItem mnemonicParsing="false" text="Shuffle" />
                         <MenuItem mnemonicParsing="false" text="Clear   Ctrl-X" />
-                        <MenuItem mnemonicParsing="false" text="Edit" />
+                        <MenuItem mnemonicParsing="false" text="Exit" />
                     </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="Exit">
+                <Menu mnemonicParsing="false" text="Edit">
                     <items>
                         <Menu mnemonicParsing="false" text="Picture Effect">
                             <items>
@@ -35,12 +36,16 @@
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="View">
-                    <items>
-                        <CheckMenuItem mnemonicParsing="false" text="Title" />
-                        <CheckMenuItem mnemonicParsing="false" text="Binomial name" />
-                        <CheckMenuItem mnemonicParsing="false" text="Picture" />
-                        <CheckMenuItem mnemonicParsing="false" text="Description" />
-                    </items>
+               <items>
+                  <RadioMenuItem mnemonicParsing="false" text="Title" />
+                  <RadioMenuItem mnemonicParsing="false" text="Binomial name">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="grupo" />
+                     </toggleGroup>
+                  </RadioMenuItem>
+                  <RadioMenuItem mnemonicParsing="false" text="Picture" />
+                  <RadioMenuItem mnemonicParsing="false" text="Description" toggleGroup="$grupo" />
+               </items>
                 </Menu>
             </menus>
         </MenuBar>
@@ -59,7 +64,7 @@
                      <children>
                         <ScrollPane hbarPolicy="ALWAYS" layoutX="127.0" layoutY="83.0" prefHeight="210.0" prefWidth="215.0" vbarPolicy="ALWAYS">
                            <content>
-                              <StackPane prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: black; -fx-border-color: yellow; -fx-border-width: 7;" />
+                              <StackPane prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: black; -fx-border-color: #5ac63c; -fx-border-width: 4;" />
                            </content>
                         </ScrollPane>
                      </children></AnchorPane>
